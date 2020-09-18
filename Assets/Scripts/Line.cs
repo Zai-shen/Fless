@@ -33,7 +33,7 @@ public class Line : MonoBehaviour
         lineObjects.Add(lineLeft);
 
         //Score trigger
-        lineMiddle = Instantiate(scoreTrigger, new Vector3((-totalLineWidth / 2) + widthLeft + (midSpace / 2), transform.position.y - 0.5f, transform.position.z), Quaternion.identity);
+        lineMiddle = Instantiate(scoreTrigger, new Vector3((-totalLineWidth / 2) + widthLeft + (midSpace / 2), transform.position.y - 0.25f, transform.position.z), Quaternion.identity);
         lineMiddle.transform.localScale = new Vector3(midSpace, lineMiddle.transform.localScale.y, lineMiddle.transform.localScale.z);
         lineObjects.Add(lineMiddle);
 
