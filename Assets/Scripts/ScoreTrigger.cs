@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class ScoreTrigger : MonoBehaviour
 {
+    private Score scoreComponent;
     private bool scored;
+
+    private void Start()
+    {
+        scoreComponent = GameObject.Find("Score").GetComponent<Score>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !scored)
         {
+            //Debug.Log("Trigger collided with tag: " + other.tag + " increasing score");
+            scoreComponent.increaseScore(1f);
             scored = true;
         }
     }
