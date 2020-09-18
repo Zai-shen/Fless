@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
             gameIsOver = true;
 
             audioManager.Play("PlayerLost");
-            failLevelUI.SetActive(true);
+            //failLevelUI.SetActive(true);
             Invoke("Restart", restartDelay);
         }
     }
