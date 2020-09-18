@@ -99,8 +99,8 @@ public class GameManager : MonoBehaviour
                 break;
             case 1:
                 Debug.Log("Game");
-                audioManager.StopAllSoundsBut("Lvl1");
-                audioManager.PlayIfIsntAlreadyPlaying("Lvl1");
+                audioManager.StopAllSoundsBut("Lvl2");
+                audioManager.PlayIfIsntAlreadyPlaying("Lvl2");
                 break;
             default:
                 Debug.LogWarning("Unknown stage");

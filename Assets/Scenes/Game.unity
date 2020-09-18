@@ -923,6 +923,24 @@ PrefabInstance:
     - {fileID: 6142171001326515543, guid: f51e2ca1d92b1f745a47360bd74110e7, type: 3}
     - {fileID: 1625096706, guid: f51e2ca1d92b1f745a47360bd74110e7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f51e2ca1d92b1f745a47360bd74110e7, type: 3}
+--- !u!1 &933669226 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7030729646243689128, guid: 012d0acd44f8df34bb0cadf2bc9b877d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1186069571}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &933669227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933669226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc505fc158a43c94ebc02bce9e7df0a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &983927253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1568,6 +1586,36 @@ PrefabInstance:
     - target: {fileID: 4857252647813642161, guid: f276e5c3737ee054e9ed990a409b4a28,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4857252647813642166, guid: f276e5c3737ee054e9ed990a409b4a28,
+        type: 3}
+      propertyPath: sounds.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4857252647813642166, guid: f276e5c3737ee054e9ed990a409b4a28,
+        type: 3}
+      propertyPath: sounds.Array.data[7].name
+      value: Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 4857252647813642166, guid: f276e5c3737ee054e9ed990a409b4a28,
+        type: 3}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3ffba7ebe27d30d47949cbc9989be34d, type: 3}
+    - target: {fileID: 4857252647813642166, guid: f276e5c3737ee054e9ed990a409b4a28,
+        type: 3}
+      propertyPath: sounds.Array.data[7].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4857252647813642166, guid: f276e5c3737ee054e9ed990a409b4a28,
+        type: 3}
+      propertyPath: sounds.Array.data[7].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4857252647813642166, guid: f276e5c3737ee054e9ed990a409b4a28,
+        type: 3}
+      propertyPath: sounds.Array.data[7].loop
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4857252647813642167, guid: f276e5c3737ee054e9ed990a409b4a28,
