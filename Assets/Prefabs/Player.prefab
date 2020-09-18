@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1681021407124426955}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,10 +44,11 @@ GameObject:
   - component: {fileID: 492741049881902157}
   - component: {fileID: 3867347300048991853}
   - component: {fileID: 1215560051918894885}
-  - component: {fileID: 1215560051918894886}
+  - component: {fileID: 898254959}
+  - component: {fileID: 898254958}
   m_Layer: 0
   m_Name: mesh
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,8 +143,8 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 56
-  m_CollisionDetection: 1
---- !u!114 &1215560051918894886
+  m_CollisionDetection: 2
+--- !u!114 &898254959
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,9 +153,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 7030729646243689128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a21f4cc724da12249bc9d772386b3a21, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a1d06849d594894a842b65c74ed9aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 500
+--- !u!114 &898254958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7030729646243689128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9ce5c8c7c85a34c93373ad683c81b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   fallEffect: {fileID: 617914143959793706, guid: 57f48f5e0c4887543942e55210ddea77,
     type: 3}
