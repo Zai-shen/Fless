@@ -58,13 +58,6 @@ public class LineSpawning : MonoBehaviour
         Gizmos.DrawCube(new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), new Vector3(1,1,1));
     }
 
-    private void ChangeBGAndFogColor()
-    {
-        Color newColor = Random.ColorHSV(0f, 1f, 0.5f, 0.75f, 0.5f, 0.75f);
-        cameraForBGColor.backgroundColor = newColor;
-        RenderSettings.fogColor = newColor;
-    }
-
     IEnumerator RepeatSpawning()
     {
         yield return new WaitForSeconds(initialSpawnDelay);
@@ -86,10 +79,7 @@ public class LineSpawning : MonoBehaviour
             //Debug.Log("New level!");
             currentLevel++;
 
-            if (currentLevel % 2 == 0)
-            {
-                ChangeBGAndFogColor();
-            }
+            StartCoroutine(ChangeColor(0.5f));
 
             levelSpeed += additionalLevelSpeed;
             foreach (GameObject line in spawnedLines)
@@ -100,6 +90,26 @@ public class LineSpawning : MonoBehaviour
             continuousSpawnDelay = Mathf.Clamp(continuousSpawnDelay - lessSpawnDelay, 0.75f, 10f);
 
             yield return new WaitForSeconds(levelDuration);
+        }
+    }
+
+    private IEnumerator ChangeColor(float changeT)
+    {
+        //Save our initial color
+        Color color = cameraForBGColor.backgroundColor;
+
+        //Get a random color to change to
+        Color newColor = Random.ColorHSV(0f, 1f, 0.5f, 0.75f, 0.5f, 0.75f);
+
+        float t = 0;
+
+        while (t < 1)
+        {
+            //Set our color
+            cameraForBGColor.backgroundColor = Color.Lerp(color, newColor, t);
+            //Update our t according to how much time has passed
+            t += Time.deltaTime / changeT;
+            yield return null;
         }
     }
 
