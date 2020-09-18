@@ -4,12 +4,11 @@ Requires **Unity 2019.4.5f1**. / Windows.
 
 ## Opinions
 
-This small but fun project was done in only 5h35m, a record time, at least for me. There may be minor bugs, but no game-changing ones. The overall feel should be the same as for every hyper-casual mobile game nowadays. Executable only on Windows due to IL2CPP.
-
+Fless stands for **F**alling End**less** - but also reminds me of what I have most - **stress**. This small but fun project was done in only 5h35m, a record time, at least for me. There may be minor bugs, but no game-changing ones. The overall feel should be the same as for every hyper-casual mobile game nowadays. Executable only on Windows due to IL2CPP.
 
 ## Goal 
 
-![example](Images/example-faller.gif)
+<img alt="Example" src="Images/example-faller.gif" height="250"/> <img alt="Fless" src="Images/Fless.gif" height="250"/>
 
 Implement a simple endless falling game where the character must fall between platforms to stay on screen. 
 
