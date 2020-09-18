@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private float restartDelay = 2f;
     private AudioManager audioManager;
     public GameObject failLevelUI;
+    public GameObject retryCanvas;
 
     public void LoadNextLevel()
     {
@@ -43,9 +44,19 @@ public class GameManager : MonoBehaviour
             gameIsOver = true;
 
             audioManager.Play("PlayerLost");
-            //failLevelUI.SetActive(true);
-            Invoke("Restart", restartDelay);
+            failLevelUI.SetActive(true);
+            StartCoroutine(ShowRetryCanvas(restartDelay));
+            AudioListener.volume = PlayerPrefs.GetFloat("Volume", 0) / 2;
+            Time.timeScale = 0f;
+            //Invoke("Restart", restartDelay);
         }
+    }
+
+    private IEnumerator ShowRetryCanvas(float startDelay)
+    {
+        yield return new WaitForSecondsRealtime(startDelay);
+        retryCanvas.SetActive(true);
+        Cursor.visible = true;
     }
 
     public void QuitApp()
@@ -63,6 +74,8 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         Debug.Log("Restarting scene");
+        Time.timeScale = 1f;
+        AudioListener.volume = AudioListener.volume = PlayerPrefs.GetFloat("Volume", 0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
